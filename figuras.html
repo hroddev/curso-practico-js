@@ -4,12 +4,188 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
     <title>Figuras Geométrias | Curso práctico de JS</title>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --blue: rgb(4, 4, 34);
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: rgb(240, 239, 238);
+        }
+        .header {
+            display: grid;
+            justify-content: center;
+            
+        }
+        .header H1 {
+            text-align: center;
+            font-size: var(--lg);
+            margin:  0;
+            padding-top: 24px;
+        }
+        .header p {
+            text-align: center;
+            font-size: var(--sm);
+            margin: 8px 0 44px;
+        }
+        .main-container {
+            display: grid;
+            width: 100%;
+            height: 100vh;
+            place-items: center;
+            
+        }
+        .main-container h2 {
+            font-size: var(--md);
+            font-weight: bold;
+            color: var(--white);
+        }
+        .cards-container {
+            width: 400px; 
+            display: grid;
+            grid-template-rows: 1fr auto auto;
+            justify-items: center;
+        }
+        .card {
+            display: grid;
+            justify-content: center;
+            margin: 24px 0;
+            padding: 18px 8px;
+            background-color: var(--white);
+        }
+        .card h2 {
+            text-align: center;
+            font-size: var(--md);
+        }
+        .image{
+            width: 150px;
+            height: 150px;
+            /* border-radius: 50%;
+            background-color: var(--hospital-green); */
+            display: grid;
+            justify-items: center;
+            align-items: center;
+        }
+        .image img {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+        .card label {
+            font-size: var(--sm);
+            color: var(--very-light-pink);
+            padding: 14px 24px;
+        }
+        .card input {
+            width: 100px;
+            height: 20px;
+            border: 1px solid var(--very-light-pink);
+            border-radius: 6px;
+        }
+        .button-container {
+            display: grid;
+            grid-template-rows: 100px 100px;
+        }
+        .card button {
+            width: 100px;
+            height: 20px;
+            display: grid;
+            justify-content: center;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>
-        Figuras Geométrias
-    </h1>
+    <header class="header">
+        <h1>
+            Geometric figures
+        </h1>
+        <p> In this form, you can make calc of geometric figures.</p>
+    </header>
+    
+    <section class="main-container">
+        <div class="cards-container">
+            
+            <div class="card">
+                <div class="image">
+                    <img src="./icons/cuadrado.webp" alt="square">
+                </div>
+                <h2>Calc the area and perimeter of a square</h2>
+                <label  for="InputCuadrado">
+                    Enter the length of the square:
+                </label>
+                <input id="InputCuadrado" type="number">
+                <div class="button-container">
+                    <button type = "botton" onclick="calcularPerimetroCuadrado()">
+                        Calc perimeter
+                    </button>
+                    <button type = "botton" onclick="calcularAreaCuadrado()"> 
+                        Calc the area
+                    </button>
+                </div>
+            </div> 
+        
+        <div class="card">
+            <div class="image">
+                <img src="./icons/circle.png" alt="circle">
+            </div>
+                <h2>Calc the area and perimeter of a circle</h2>
+                <label  for="InputCirculo">
+                    Enter the length of the circle:
+                </label>
+                <input id="InputCirculo" type="number">
+                <button type = "botton" onclick="calcularPerimetroCirculo()">
+                    Calc perimeter
+                </button>
+                <button type = "botton" onclick="calcularAreaCirculo()"> 
+                    Calc the area
+                </button>
+            </div>
+        
+        <div class="card">
+            <div class="image">
+                <img src="./icons/triangle.png" alt="triangle">
+            </div>
+                <h2>Calc the area and perimeter of a triangle</h2>
+                    <label  for="InputTrianguloLado1">
+                        Enter the length of side 1 of the triangle:
+                    </label>
+                    <input id = "InputTrianguloLado1" type="number">
+                    <label  for = "InputTrianguloLado2">
+                        Enter the length of side 2 of the triangle:
+                    </label>
+                    <input id= "InputTrianguloLado2" type="number">
+                    <label  for = "InputTrianguloBase">
+                        Enter the length of base of the triangle:
+                    </label>
+                    <input id="InputTrianguloBase" type="number">
+                    <button type = "botton" onclick = "calcularPerimetroTriangulo()">
+                        Calc perimeter
+                    </button>
+                    <button type = "button" onclick = "calcularAreaTriangulo()"> 
+                        Calc the area
+                    </button>
+                    <button type = "button" onclick = "calcularAlturaTriangulo()"> 
+                        Calc the heigth
+                    </button>
+            </div>
+        </div>
+    </section>
+
     <script src="./figuras.js"></script>
 </body>
 </html>
