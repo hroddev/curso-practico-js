@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Percents and Discounts | Platzi's JS practice class</title>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #0fa1e4;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+            
+        }
+        header {
+            display: grid;
+            place-items: center; 
+        }
+        header h1 {
+            margin: 64px 0 8px;
+            font-size: var(--lg);
+        }
+        header p {
+            color: var(--very-light-pink);
+            font-size: var(--md);
+            font-weight: 300;
+            margin-top: 0;
+            margin-bottom: 64px;
+            text-align: center;
+        }
+        .main-container {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            place-items: center;
+            margin-top: 32px;
+        }
+        .main-container h2 {
+            font-size: var(--md);
+            margin-bottom: 36px;
+        }
+        .card-container {
+            display: flex;
+            grid-template-rows: auto 1fr auto;
+            width: 325px;
+        }
+        .cards {
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .cards label {
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .cards input {
+            background-color: var(--text-input-field);
+            border: none;
+            border-radius: 8px;
+            height: 30px;
+            font-size: var(--md);
+            padding: 6px;
+            margin-bottom: 12px;
+        }
+        .cards button {
+            background-color: var(--hospital-green);
+            border-radius: 8px;
+            border: none;
+            width: 100%;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+            color: white;
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        
+        <div class="card-container">
+            <div class="cards">
+            <header>
+                <h1>Percents and Discounts</h1>
+                <p>This is the second workshop of the JavaScript practical course of Platzi.</p>
+            </header>
+                <h2>Calc the price to pay of your products with discount</h2>
+
+            <label for="InputPrice">Enter the price of your product</label>
+            <input id="InputPrice" type="number">
+
+            <label for="InputDiscount">Enter the coupon discount for your product</label>
+            <input id="InputCoupon" type="test">
+
+            <button type="button" onclick="onClicButtonPriceDiscount()">
+                Calc the price with discount
+            </button>
+            <p id="ResultP"></p>
+        </div>
+    </div>
+    </div>
+    <script src="./discount.js"></script>
+</body>
+</html>

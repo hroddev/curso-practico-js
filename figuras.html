@@ -12,101 +12,93 @@
         :root {
             --white: #FFFFFF;
             --black: #000000;
-            --blue: rgb(4, 4, 34);
             --very-light-pink: #C7C7C7;
             --text-input-field: #F7F7F7;
-            --hospital-green: #ACD9B2;
+            --hospital-green: #0fa1e4;
             --sm: 14px;
             --md: 16px;
             --lg: 18px;
         }
         body {
+            margin: 0;
             font-family: 'Quicksand', sans-serif;
-            background-color: rgb(240, 239, 238);
-        }
-        .header {
-            display: grid;
-            justify-content: center;
             
         }
-        .header H1 {
-            text-align: center;
-            font-size: var(--lg);
-            margin:  0;
-            padding-top: 24px;
+        header {
+            display: grid;
+            place-items: center; 
         }
-        .header p {
+        header h1 {
+            margin: 64px 0 8px;
+            font-size: var(--lg);
+        }
+        header p {
+            color: var(--very-light-pink);
+            font-size: var(--md);
+            font-weight: 300;
+            margin-top: 0;
+            margin-bottom: 64px;
             text-align: center;
-            font-size: var(--sm);
-            margin: 8px 0 44px;
         }
         .main-container {
-            display: grid;
             width: 100%;
-            height: 100vh;
+            height: 100%;
+            display: grid;
             place-items: center;
-            
+            /* margin-top: 32px; */
         }
         .main-container h2 {
             font-size: var(--md);
-            font-weight: bold;
-            color: var(--white);
+            margin-bottom: 36px;
         }
-        .cards-container {
-            width: 400px; 
-            display: grid;
-            grid-template-rows: 1fr auto auto;
-            justify-items: center;
-        }
-        .card {
-            display: grid;
-            justify-content: center;
-            margin: 24px 0;
-            padding: 18px 8px;
-            background-color: var(--white);
-        }
-        .card h2 {
-            text-align: center;
-            font-size: var(--md);
-        }
-        .image{
-            width: 150px;
-            height: 150px;
-            /* border-radius: 50%;
-            background-color: var(--hospital-green); */
-            display: grid;
-            justify-items: center;
-            align-items: center;
-        }
-        .image img {
-            width: 100px;
-            height: 100px;
+        .card-container {
             display: flex;
-            justify-content: center;
-            align-content: center;
+            /* grid-template-rows: 1fr auto; */
+            
         }
-        .card label {
+        .cards {
+            display: flex;
+            flex-direction: column;
+            padding: 32px;
+        }
+        .cards label {
             font-size: var(--sm);
-            color: var(--very-light-pink);
-            padding: 14px 24px;
+            font-weight: bold;
+            margin-bottom: 4px;
         }
-        .card input {
-            width: 100px;
-            height: 20px;
-            border: 1px solid var(--very-light-pink);
-            border-radius: 6px;
+        .cards input {
+            background-color: var(--text-input-field);
+            border: none;
+            border-radius: 8px;
+            height: 30px;
+            font-size: var(--md);
+            padding: 6px;
+            margin-bottom: 12px;
         }
         .button-container {
-            display: grid;
-            grid-template-rows: 100px 100px;
+            margin-top: 24px;
         }
-        .card button {
-            width: 100px;
-            height: 20px;
-            display: grid;
-            justify-content: center;
+        .cards button {
+            background-color: var(--hospital-green);
+            border-radius: 8px;
+            border: none;
+            width: 100%;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+            color: white;
+            margin-bottom: 8px;
         }
-
+        @media (max-width: 640px) {
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill,400px);
+            gap: 26px;
+        }
+        /* .card {
+            width: 240px;
+        } */
+        }
     </style>
 </head>
 <body>
@@ -118,12 +110,12 @@
     </header>
     
     <section class="main-container">
-        <div class="cards-container">
+        <div class="card-container">
             
-            <div class="card">
-                <div class="image">
+            <div class="cards">
+                <!-- <div class="image">
                     <img src="./icons/cuadrado.webp" alt="square">
-                </div>
+                </div> -->
                 <h2>Calc the area and perimeter of a square</h2>
                 <label  for="InputCuadrado">
                     Enter the length of the square:
@@ -139,27 +131,29 @@
                 </div>
             </div> 
         
-        <div class="card">
-            <div class="image">
+        <div class="cards">
+            <!-- <div class="image">
                 <img src="./icons/circle.png" alt="circle">
-            </div>
+            </div> -->
                 <h2>Calc the area and perimeter of a circle</h2>
                 <label  for="InputCirculo">
                     Enter the length of the circle:
                 </label>
                 <input id="InputCirculo" type="number">
-                <button type = "botton" onclick="calcularPerimetroCirculo()">
-                    Calc perimeter
-                </button>
-                <button type = "botton" onclick="calcularAreaCirculo()"> 
-                    Calc the area
-                </button>
+                <div class="button-container">
+                    <button type = "botton" onclick="calcularPerimetroCirculo()">
+                        Calc perimeter
+                    </button>
+                    <button type = "botton" onclick="calcularAreaCirculo()"> 
+                        Calc the area
+                    </button>
+                </div>
             </div>
         
-        <div class="card">
-            <div class="image">
+        <div class="cards">
+            <!-- <div class="image">
                 <img src="./icons/triangle.png" alt="triangle">
-            </div>
+            </div> -->
                 <h2>Calc the area and perimeter of a triangle</h2>
                     <label  for="InputTrianguloLado1">
                         Enter the length of side 1 of the triangle:
@@ -173,15 +167,17 @@
                         Enter the length of base of the triangle:
                     </label>
                     <input id="InputTrianguloBase" type="number">
-                    <button type = "botton" onclick = "calcularPerimetroTriangulo()">
-                        Calc perimeter
-                    </button>
-                    <button type = "button" onclick = "calcularAreaTriangulo()"> 
-                        Calc the area
-                    </button>
-                    <button type = "button" onclick = "calcularAlturaTriangulo()"> 
-                        Calc the heigth
-                    </button>
+                    <div class="button-container">
+                        <button type = "botton" onclick = "calcularPerimetroTriangulo()">
+                            Calc perimeter
+                        </button>
+                        <button type = "button" onclick = "calcularAreaTriangulo()"> 
+                            Calc the area
+                        </button>
+                        <button type = "button" onclick = "calcularAlturaTriangulo()"> 
+                            Calc the heigth
+                        </button>
+                    </div>
             </div>
         </div>
     </section>
