@@ -1,18 +1,27 @@
-# Curso práctico de JavaScript
 
-...
+# Workshops of JavaScript 
+## Practical courses in Platzi
 
-## Taller #1: figuras geométricas
+***
 
-- Primer paso: definir las férmulas
-- Segundo paso: implementar las fórmulas en JavaScript
-- Tercer paso: crear funciones
-- Cuarto paso: integrar JS con HTML 
+### Workshop #1: Geometric figures
+
+    1. Define the formulas.
+    2. Implement the formulas in JS
+    3. Create a functions
+    4. Integrate the JS into the HTML
 
 
-## Taller #2 porcentajes y descuentos
+### Taller #2 porcentajes y descuentos
 
-- Primer paso: definir formulas
-- Segundo paso: implementar las fórmulas en JS
-- Tercer paso: crear funciones
-- Cuarto paso: integrar JS con HTML
+    1. Define the formulas.
+    2. Implement the formulas in JS
+    3. Create a functions
+    4. Integrate the JS into the HTML
+
+### Workshop #3 - Average, median and mode
+
+    1. Define the formulas.
+    2. Implement the formulas in JS
+    3. Create a functions
+    4. Integrate the JS into the HTML
