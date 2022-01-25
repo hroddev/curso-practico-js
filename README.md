@@ -19,6 +19,6 @@ If you have any questions, feel free to write to me at [hector@hrod.dev](mailto:
 
 ### [Workshop #1: Geometric figures](https://github.com/hroddev/curso-practico-js/tree/main/ws1)
 
-### [Workshop #2 porcentajes y descuentos](https://github.com/hroddev/curso-practico-js/tree/main/ws2)
+### [Workshop #2 Percents and Discounts](https://github.com/hroddev/curso-practico-js/tree/main/ws2)
 
 ### [Workshop #3 - Average, median and mode](https://github.com/hroddev/curso-practico-js/tree/main/ws3)
